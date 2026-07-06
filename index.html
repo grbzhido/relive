@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relive — Your Memories, Reimagined</title>
+  <meta name="description" content="Relive transforms your photos into beautiful polaroid memories. Organize trips, discover insights, clean up duplicates, and earn achievements — all with your privacy intact.">
+  <meta name="keywords" content="relive, photo memories, polaroid, trips, photo organizer, iOS app, privacy, achievements">
+  <meta name="author" content="Relive">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Relive — Your Memories, Reimagined">
+  <meta property="og:description" content="Transform your photos into beautiful polaroid memories. Organize trips, discover insights, and earn achievements.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://grbzhido.github.io/relive/">
+  <meta property="og:image" content="https://grbzhido.github.io/relive/images/relive_icon.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Relive — Your Memories, Reimagined">
+  <meta name="twitter:description" content="Transform your photos into beautiful polaroid memories.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/relive_icon.png">
+  <link rel="apple-touch-icon" href="images/relive_icon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Animated Background Orbs -->
+  <div class="bg-animation" aria-hidden="true">
+    <div class="bg-orb bg-orb--1"></div>
+    <div class="bg-orb bg-orb--2"></div>
+    <div class="bg-orb bg-orb--3"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo" aria-label="Relive Home">
+        <img src="images/relive_icon.png" alt="Relive icon" width="36" height="36">
+        <span>Relive</span>
+      </a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="#features" class="nav__link">Features</a></li>
+        <li><a href="#how-it-works" class="nav__link">How It Works</a></li>
+        <li><a href="#premium" class="nav__link">Premium</a></li>
+        <li><a href="#" class="nav__cta" id="nav-download-btn">
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+          Download
+        </a></li>
+      </ul>
+
+      <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero__content">
+      <img src="images/relive_icon.png" alt="Relive App Icon" class="hero__icon" width="100" height="100">
+
+      <div class="hero__badge">
+        <span class="hero__badge-dot"></span>
+        Available on iOS
+      </div>
+
+      <h1 class="hero__title">
+        Your Memories,<br>
+        <span class="hero__title-gradient">Reimagined.</span>
+      </h1>
+
+      <p class="hero__subtitle">
+        Turn your everyday photos into beautiful polaroid memories. Organize trips, discover insights, and relive your best moments — all while keeping your data private.
+      </p>
+
+      <div class="hero__actions">
+        <a href="#" class="btn btn--primary" id="hero-download-btn">
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6 6-6-6"/><path d="M12 3v18"/></svg>
+          Download on App Store
+        </a>
+        <a href="#features" class="btn btn--ghost">
+          Explore Features
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="section" id="features">
+    <div class="section__inner">
+      <div class="section__header reveal">
+        <div class="section__label">
+          <span>✦</span> Features
+        </div>
+        <h2 class="section__title">Everything you need to<br>cherish your memories</h2>
+        <p class="section__description">
+          Relive is packed with powerful features designed to help you organize, explore, and celebrate your photo memories.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card reveal reveal--delay-1" id="feature-memories">
+          <div class="feature-card__icon">📸</div>
+          <h3 class="feature-card__title">Polaroid Memories</h3>
+          <p class="feature-card__description">
+            Transform your photos into beautiful, flippable polaroid cards. Add personal notes on the back — just tap and flip.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card reveal reveal--delay-2" id="feature-trips">
+          <div class="feature-card__icon">🗺️</div>
+          <h3 class="feature-card__title">Trips &amp; Maps</h3>
+          <p class="feature-card__description">
+            Automatically organize your geotagged photos into trips. See where your memories happened on interactive maps.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card reveal reveal--delay-3" id="feature-cleanup">
+          <div class="feature-card__icon">🧹</div>
+          <h3 class="feature-card__title">Smart Cleanup</h3>
+          <p class="feature-card__description">
+            Swipe through similar photos and keep only the best ones. Free up storage with intelligent duplicate detection.
+          </p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-card reveal reveal--delay-4" id="feature-analytics">
+          <div class="feature-card__icon">📊</div>
+          <h3 class="feature-card__title">Analytics &amp; Calendar</h3>
+          <p class="feature-card__description">
+            Visualize your memory activity with a beautiful heatmap calendar. Track your photo habits across seasons and years.
+          </p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="feature-card reveal reveal--delay-5" id="feature-achievements">
+          <div class="feature-card__icon">🏆</div>
+          <h3 class="feature-card__title">Achievements &amp; Badges</h3>
+          <p class="feature-card__description">
+            Earn fun achievements as you build your memory collection. Complete streaks, reach milestones, and unlock badges.
+          </p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="feature-card reveal reveal--delay-6" id="feature-privacy">
+          <div class="feature-card__icon">🔒</div>
+          <h3 class="feature-card__title">Privacy First</h3>
+          <p class="feature-card__description">
+            All your data stays on your device. No cloud uploads, no tracking, no compromises. Your memories belong to you.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works / Showcase Section -->
+  <section class="showcase" id="how-it-works">
+    <div class="showcase__inner">
+      <div class="showcase__visual reveal">
+        <div class="showcase__phone">
+          <div class="showcase__screen">
+            <img src="images/relive_icon.png" alt="Relive" class="showcase__screen-icon" width="60" height="60">
+            <div class="showcase__screen-title">Relive</div>
+            <div class="showcase__screen-sub">Relive your memories</div>
+
+            <div class="polaroid-stack">
+              <div class="polaroid polaroid--1">
+                <div class="polaroid__image" style="background: linear-gradient(135deg, #FF6B6B, #FFA36C);"></div>
+              </div>
+              <div class="polaroid polaroid--2">
+                <div class="polaroid__image" style="background: linear-gradient(135deg, #48C9B0, #1ABC9C);"></div>
+              </div>
+              <div class="polaroid polaroid--3">
+                <div class="polaroid__image" style="background: linear-gradient(135deg, #5B86E5, #36D1DC);"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="showcase__content reveal reveal--delay-2">
+        <div class="section__label">
+          <span>✦</span> How It Works
+        </div>
+        <h2 class="section__title" style="text-align: left;">Three simple steps to<br>relive your best moments</h2>
+
+        <ul class="feature-list">
+          <li class="feature-list__item">
+            <div class="feature-list__check">1</div>
+            <div class="feature-list__text">
+              <strong>Select Photos</strong> — Pick photos from your library or take new ones. Relive reads location and date metadata automatically.
+            </div>
+          </li>
+          <li class="feature-list__item">
+            <div class="feature-list__check">2</div>
+            <div class="feature-list__text">
+              <strong>Create Memories</strong> — Your photos become beautiful polaroid cards organized by time and place. Flip them to add personal notes.
+            </div>
+          </li>
+          <li class="feature-list__item">
+            <div class="feature-list__check">3</div>
+            <div class="feature-list__text">
+              <strong>Explore &amp; Enjoy</strong> — Browse your memories by timeline or trips. Track achievements, clean up duplicates, and revisit past moments.
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Premium Section -->
+  <section class="premium" id="premium">
+    <div class="premium__card reveal">
+      <div class="premium__badge">
+        ✦ Premium
+      </div>
+      <h2 class="premium__title">
+        Unlock the full potential<br>of your memories
+      </h2>
+      <p class="premium__description">
+        Go premium to access advanced features and take your memory experience to the next level.
+      </p>
+
+      <div class="premium__features">
+        <div class="premium__feature">
+          <span class="premium__feature-icon">✓</span>
+          Detailed Location Insights &amp; City Maps
+        </div>
+        <div class="premium__feature">
+          <span class="premium__feature-icon">✓</span>
+          All-Time Memory Calendar Activity
+        </div>
+        <div class="premium__feature">
+          <span class="premium__feature-icon">✓</span>
+          Premium Achievements &amp; Badges
+        </div>
+        <div class="premium__feature">
+          <span class="premium__feature-icon">✓</span>
+          Advanced Year-in-Review Summaries
+        </div>
+        <div class="premium__feature">
+          <span class="premium__feature-icon">✓</span>
+          Ad-Free Experience
+        </div>
+        <div class="premium__feature">
+          <span class="premium__feature-icon">✓</span>
+          Unlimited Smart Cleanup
+        </div>
+      </div>
+
+      <a href="#" class="btn btn--primary" id="premium-download-btn">
+        <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6 6-6-6"/><path d="M12 3v18"/></svg>
+        Get Relive Premium
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <img src="images/relive_icon.png" alt="Relive" width="28" height="28">
+        <span class="footer__brand-name">Relive</span>
+      </div>
+
+      <ul class="footer__links" role="list">
+        <li><a href="privacy.html" class="footer__link" id="footer-privacy">Privacy Policy</a></li>
+        <li><a href="terms.html" class="footer__link" id="footer-terms">Terms of Use</a></li>
+        <li><a href="mailto:contactus.relive@gmail.com" class="footer__link" id="footer-contact">Contact</a></li>
+      </ul>
+
+      <p class="footer__copy">
+        &copy; 2026 Relive. All rights reserved. Made with ❤️
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
