@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation &amp; Support — Relive</title>
+  <meta name="description" content="User guide, setup, privacy details, and troubleshooting for the Relive app.">
+  <link rel="icon" type="image/png" href="images/relive_icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .docs-layout {
+      position: relative;
+      z-index: 1;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: var(--space-4xl) var(--space-lg) var(--space-3xl);
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: var(--space-2xl);
+    }
+
+    /* Sidebar Navigation */
+    .docs-sidebar {
+      position: sticky;
+      top: 100px;
+      height: fit-content;
+      background: var(--bg-glass);
+      border: 1px solid var(--bg-glass-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .docs-sidebar__title {
+      font-size: var(--font-sm);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--brand-primary-light);
+      margin-bottom: var(--space-md);
+      font-weight: 700;
+    }
+
+    .docs-sidebar__menu {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+
+    .docs-sidebar__link {
+      font-size: var(--font-sm);
+      color: var(--text-secondary);
+      transition: var(--transition-fast);
+      display: block;
+      padding: 6px 0;
+    }
+
+    .docs-sidebar__link:hover,
+    .docs-sidebar__link--active {
+      color: var(--text-primary);
+      font-weight: 600;
+      transform: translateX(4px);
+    }
+
+    /* Content Area */
+    .docs-content {
+      background: var(--bg-glass);
+      border: 1px solid var(--bg-glass-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-2xl);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .docs-content h1 {
+      font-size: var(--font-4xl);
+      font-weight: 800;
+      margin-bottom: var(--space-sm);
+      background: var(--brand-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .docs-content__intro {
+      font-size: var(--font-lg);
+      color: var(--text-secondary);
+      margin-bottom: var(--space-xl);
+      line-height: 1.6;
+    }
+
+    .docs-section {
+      margin-bottom: var(--space-2xl);
+      padding-bottom: var(--space-xl);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .docs-section:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .docs-section h2 {
+      font-size: var(--font-2xl);
+      font-weight: 700;
+      margin-bottom: var(--space-md);
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+
+    .docs-section h3 {
+      font-size: var(--font-lg);
+      font-weight: 600;
+      margin-top: var(--space-lg);
+      margin-bottom: var(--space-sm);
+      color: var(--brand-primary-light);
+    }
+
+    .docs-section p, .docs-section li {
+      font-size: var(--font-base);
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: var(--space-sm);
+    }
+
+    .docs-section ul, .docs-section ol {
+      padding-left: var(--space-lg);
+      margin-bottom: var(--space-md);
+    }
+
+    .docs-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: var(--space-md);
+      margin-top: var(--space-md);
+    }
+
+    .docs-card__title {
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+    }
+
+    /* Back Link */
+    .docs-back {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-sm);
+      color: var(--text-muted);
+      font-size: var(--font-sm);
+      margin-bottom: var(--space-xl);
+      transition: var(--transition-fast);
+      text-decoration: none;
+    }
+
+    .docs-back:hover {
+      color: var(--text-primary);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .docs-layout {
+        grid-template-columns: 1fr;
+        padding-top: var(--space-3xl);
+      }
+      .docs-sidebar {
+        position: relative;
+        top: 0;
+        width: 100%;
+      }
+      .docs-content {
+        padding: var(--space-lg);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-animation" aria-hidden="true">
+    <div class="bg-orb bg-orb--1"></div>
+    <div class="bg-orb bg-orb--2"></div>
+  </div>
+
+  <div class="docs-layout">
+    
+    <!-- Sidebar -->
+    <aside class="docs-sidebar">
+      <div class="docs-sidebar__title">Guides</div>
+      <ul class="docs-sidebar__menu">
+        <li><a href="#getting-started" class="docs-sidebar__link">1. Getting Started</a></li>
+        <li><a href="#permissions" class="docs-sidebar__link">2. Permissions &amp; Privacy</a></li>
+        <li><a href="#cleanup" class="docs-sidebar__link">3. Smart Cleanup</a></li>
+        <li><a href="#troubleshooting" class="docs-sidebar__link">4. Troubleshooting</a></li>
+        <li><a href="#subscriptions" class="docs-sidebar__link">5. Subscription &amp; Restore</a></li>
+      </ul>
+    </aside>
+
+    <!-- Content -->
+    <main class="docs-content">
+      <a href="index.html" class="docs-back">← Back to Home</a>
+      
+      <h1>Documentation &amp; User Guide</h1>
+      <p class="docs-content__intro">
+        Welcome to the Relive User Guide. Learn how to transform your daily snapshots into gorgeous retro polaroid memories, manage space, and understand how we secure your data.
+      </p>
+
+      <!-- Section 1 -->
+      <section class="docs-section" id="getting-started">
+        <h2>📸 1. Getting Started</h2>
+        <p>Relive turns your photo library into an interactive retro photo album. Here is how the basic flow works:</p>
+        
+        <h3>Creating Your First Memory</h3>
+        <ol>
+          <li>Open the app and navigate to the <strong>Memories</strong> tab.</li>
+          <li>Tap the <strong>Add/Import</strong> icon.</li>
+          <li>Select photos from your device's library. Relive automatically parses metadata such as generation date and GPS coordinates.</li>
+          <li>Your photos are instantly rendered as beautiful physical polaroids.</li>
+        </ol>
+
+        <h3>Adding Personal Notes &amp; Voice Recording</h3>
+        <p>Every polaroid is interactive. Simply tap on any polaroid card to flip it over. On the back, you can:</p>
+        <ul>
+          <li>Type a text description or write down thoughts.</li>
+          <li>Tap the microphone icon to record a voice note (up to 3 minutes). This is perfect for preserving ambient sound or your spoken memories.</li>
+        </ul>
+      </section>
+
+      <!-- Section 2 -->
+      <section class="docs-section" id="permissions">
+        <h2>🔒 2. Permissions &amp; Privacy</h2>
+        <p>Privacy is our primary core value. Relive operates with zero cloud servers. Everything is processed directly on your device.</p>
+        
+        <div class="docs-card">
+          <div class="docs-card__title">How We Use Permissions:</div>
+          <ul>
+            <li><strong>Photo Library Access:</strong> Used solely to display your images within the app and convert them to memories. We do not upload your photos anywhere.</li>
+            <li><strong>Location Services (GPS):</strong> Used to read metadata coordinates of selected photos. This helps group memories into local "Trips" and show them on interactive maps.</li>
+            <li><strong>Microphone Access:</strong> Used exclusively when you choose to record a voice memo on the back of a memory.</li>
+            <li><strong>Tracking Permission (ATT):</strong> Used in the free version to request AdMob for personalized ads. If denied, generic ads will display instead.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Section 3 -->
+      <section class="docs-section" id="cleanup">
+        <h2>🧹 3. Smart Cleanup</h2>
+        <p>Too many duplicates cluttering your device? The Smart Cleanup manager helps you reclaim valuable disk storage.</p>
+        
+        <h3>How it works:</h3>
+        <ul>
+          <li>The app automatically analyzes local photos taken within the same timeframe (proximity scanning).</li>
+          <li>It groups similar shots together so you can review them.</li>
+          <li>Swipe right to keep the best shot, or swipe left to discard the duplicates.</li>
+          <li>Discarded photos are securely deleted from your local device gallery after system confirmation.</li>
+        </ul>
+      </section>
+
+      <!-- Section 4 -->
+      <section class="docs-section" id="troubleshooting">
+        <h2>⚙️ 4. Troubleshooting</h2>
+        <p>If you experience any issues, please review these common situations:</p>
+
+        <h3>My photos are not showing up inside the app</h3>
+        <p>This is usually caused by restricted photo library permissions. To fix this:</p>
+        <ol>
+          <li>Open your iPhone <strong>Settings</strong> app.</li>
+          <li>Scroll down and select <strong>Relive</strong>.</li>
+          <li>Tap <strong>Photos</strong> and select <strong>All Photos</strong> instead of "Selected Photos".</li>
+        </ol>
+
+        <h3>I don't receive notification summaries or reminders</h3>
+        <p>Ensure that push notifications are enabled both in the app preferences and system settings:</p>
+        <ul>
+          <li>Go to Relive <strong>Profile &rarr; Notification Preferences</strong> and configure your settings.</li>
+          <li>Check iPhone <strong>Settings &rarr; Relive &rarr; Notifications</strong> and toggle "Allow Notifications" to enabled.</li>
+        </ul>
+      </section>
+
+      <!-- Section 5 -->
+      <section class="docs-section" id="subscriptions">
+        <h2>🏆 5. Subscription &amp; Restore</h2>
+        <p>Relive Premium unlocks detailed location calendars, advanced map statistics, unlimited storage cleanup, and removes all advertisement banners.</p>
+
+        <h3>Auto-Renewal &amp; Billing</h3>
+        <p>Subscriptions automatically renew at the end of the selected billing period (Weekly/Annual) unless canceled at least 24 hours prior to the renewal date. Payments are billed directly to your Apple App Store account.</p>
+
+        <h3>Restoring Purchases</h3>
+        <p>If you reinstall the app, restore your phone, or switch to a new iOS device, you can easily restore your active subscription:</p>
+        <ol>
+          <li>Go to the <strong>Profile</strong> tab and tap <strong>Upgrade to Premium</strong>.</li>
+          <li>Scroll to the footer and tap <strong>Restore Purchases</strong>.</li>
+          <li>Our integration will securely contact the App Store to reactivate your subscription status immediately.</li>
+        </ol>
+      </section>
+
+    </main>
+
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
