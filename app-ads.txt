@@ -1,0 +1,5 @@
+# Google AdMob
+google.com, pub-5950489813588007, DIRECT, f08c47fec0942fa0
+
+# Unity Ads
+unity3d.com, 800107008, RESELLER
